@@ -18,7 +18,7 @@ public class ListItems extends HttpServlet {
         }
         items.add(request.getParameter("item"));
         session.setAttribute("items", items);
-        //print the list of items
+        //Print the list of items
         try {
             response.setContentType("text/html");
             java.io.PrintWriter out = response.getWriter();

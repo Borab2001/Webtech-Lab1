@@ -10,7 +10,7 @@ public class ShowSession extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
-            //count the number of visits
+            //Count the number of visits
             HttpSession session = request.getSession();
             if (session.getAttribute("count_visits") == null) {
                 response.setContentType("text/html");

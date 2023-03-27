@@ -11,34 +11,33 @@ public class Login extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-        //Cookies
+        //Create cookies
         Cookie firstName = new Cookie("first_name", request.getParameter("first_name"));
         Cookie lastName = new Cookie("last_name", request.getParameter("last_name"));
-        Cookie birthDate = new Cookie("birth_date", request.getParameter("birth_date"));
+        Cookie birth_date = new Cookie("birth_date", request.getParameter("birth_date"));
         Cookie gender = new Cookie("gender", request.getParameter("gender"));
 
-        //define the cookie's lifetime
+        //Define the cookie's lifetime
         firstName.setMaxAge(60*60*24);
         lastName.setMaxAge(60*60*24);
-        birthDate.setMaxAge(60*60*24);
+        birth_date.setMaxAge(60*60*24);
         gender.setMaxAge(60*60*24);
 
-        //define cookies domain as localhost
+        //Define cookies domain as localhost
         firstName.setDomain("localhost");
         lastName.setDomain("localhost");
-        birthDate.setDomain("localhost");
+        birth_date.setDomain("localhost");
         gender.setDomain("localhost");
 
-        //define cookies setPath as /
+        //Define cookies setPath as /
         firstName.setPath("/");
         lastName.setPath("/");
-        birthDate.setPath("/");
+        birth_date.setPath("/");
         gender.setPath("/");
 
         response.addCookie(firstName);
         response.addCookie(lastName);
-        response.addCookie(birthDate);
+        response.addCookie(birth_date);
         response.addCookie(gender);
 
         response.setContentType("text/html");
