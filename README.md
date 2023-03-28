@@ -1,4 +1,4 @@
-# Webtech-lab1
+# Webtech-Lab1
 
 Objective:
 Introduction to Java Servlets and Java Server Pages (JSP), how to use these technologies to create dynamic web applications.
